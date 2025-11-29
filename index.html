@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fridge2Plate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo" data-i18n="logo">Fridge2Plate</div>
+    <div class="language-toggle">
+      <button id="btn-en" class="lang-btn active" data-lang="en">EN</button>
+      <button id="btn-tr" class="lang-btn" data-lang="tr">TR</button>
+    </div>
+  </nav>
+  <main class="layout">
+    <aside class="filters">
+      <h2 class="section-title" data-i18n="filtersTitle">Filters</h2>
+      <div class="filter-section">
+        <h3 data-i18n="mealTypeTitle">Meal type</h3>
+        <div id="meal-type-options" class="options-grid"></div>
+      </div>
+      <div class="filter-section">
+        <h3 data-i18n="ingredientTitle">Select your ingredients</h3>
+        <div id="ingredient-options"></div>
+      </div>
+      <div class="filter-section">
+        <h3 data-i18n="missingLabel">Maximum missing ingredients</h3>
+        <select id="missing-select" aria-label="Maximum missing ingredients">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7" selected>7</option>
+          <option value="8">8</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <button id="show-recipes" class="primary-btn" data-i18n="showRecipes">Show recipes</button>
+    </aside>
+    <section class="recipes">
+      <div class="recipes-header">
+        <h2 data-i18n="recipesHeading">Recipes you can cook</h2>
+      </div>
+      <div id="recipe-grid" class="recipe-grid"></div>
+      <div id="empty-state" class="empty-state" data-i18n="emptyState"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
